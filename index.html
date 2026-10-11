@@ -1,0 +1,1000 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- R I D E L I N K BUSINESS PROFILE TEMPLATE -->
+
+  <title>Alfa Jibril Auto Service | RideLink</title>
+  <meta name="description"
+        content="Discover Alfa Jibril Auto Service in Kuje, FCT. View the business profile and contact the workshop directly.">
+
+  <meta name="theme-color" content="#071a2b">
+
+  <style>
+    :root {
+      --navy: #071a2b;
+      --navy-light: #10283a;
+      --teal: #20d6c7;
+      --green: #16c965;
+      --white: #ffffff;
+      --muted: #b8c6d2;
+      --surface: #f3f7f8;
+      --text: #182b39;
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--surface);
+      line-height: 1.65;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    header {
+      background: var(--navy);
+      color: white;
+      padding: 15px 0;
+      border-bottom: 1px solid #20394b;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: white;
+      letter-spacing: 0.5px;
+    }
+
+    .brand span {
+      color: var(--teal);
+    }
+
+    .nav-label {
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    /* HERO */
+
+    .hero {
+      position: relative;
+      min-height: 460px;
+      display: flex;
+      align-items: center;
+      color: white;
+      background: var(--navy);
+      overflow: hidden;
+    }
+
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(4, 17, 28, 0.95) 0%,
+        rgba(4, 17, 28, 0.77) 48%,
+        rgba(4, 17, 28, 0.2) 100%
+      );
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      padding: 70px 0;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 12px;
+      border: 1px solid rgba(32, 214, 199, 0.65);
+      border-radius: 30px;
+      color: var(--teal);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      line-height: 1.12;
+      max-width: 700px;
+      margin-bottom: 18px;
+      overflow-wrap: anywhere;
+    }
+
+    .hero-description {
+      color: #e2ebf1;
+      max-width: 570px;
+      font-size: 1.05rem;
+      margin-bottom: 25px;
+    }
+
+    .location {
+      color: #d0e1e8;
+      margin-bottom: 24px;
+      font-size: 0.95rem;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 20px;
+      min-height: 48px;
+      border-radius: 10px;
+      font-size: 0.94rem;
+      font-weight: 700;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.92;
+    }
+
+    .btn-whatsapp {
+      background: var(--green);
+      color: white;
+    }
+
+    .btn-call {
+      border: 1px solid rgba(255,255,255,0.6);
+      color: white;
+      background: rgba(255,255,255,0.07);
+    }
+
+    /* QUICK INFORMATION */
+
+    .quick-info {
+      background: white;
+      padding: 23px 0;
+      box-shadow: 0 5px 18px rgba(7,26,43,0.05);
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .info-item {
+      text-align: center;
+      padding: 5px;
+    }
+
+    .info-icon {
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+    }
+
+    .info-item strong {
+      display: block;
+      font-size: 0.96rem;
+    }
+
+    .info-item small {
+      color: #647785;
+      font-size: 0.82rem;
+    }
+
+    /* MAIN SECTIONS */
+
+    section.content-section {
+      padding: 60px 0;
+    }
+
+    .section-heading {
+      font-size: clamp(1.65rem, 4vw, 2.2rem);
+      color: var(--navy);
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+
+    .section-intro {
+      color: #627582;
+      max-width: 680px;
+      margin-bottom: 30px;
+    }
+
+    .about-card {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 35px;
+      align-items: center;
+      background: white;
+      padding: 30px;
+      border-radius: var(--radius);
+      box-shadow: 0 8px 28px rgba(7,26,43,0.05);
+    }
+
+    .about-copy p {
+      margin-top: 12px;
+      color: #526572;
+    }
+
+    .about-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 14px;
+    }
+
+    /* SERVICES */
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 23px;
+      border-radius: 14px;
+      border: 1px solid #e5ecef;
+    }
+
+    .service-card .service-icon {
+      font-size: 1.7rem;
+      margin-bottom: 12px;
+    }
+
+    .service-card h3 {
+      color: var(--navy);
+      font-size: 1.05rem;
+      margin-bottom: 7px;
+    }
+
+    .service-card p {
+      color: #687b87;
+      font-size: 0.9rem;
+    }
+
+    /* PHOTO GALLERY */
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .gallery-item {
+      border: 0;
+      background: transparent;
+      border-radius: 14px;
+      overflow: hidden;
+      cursor: pointer;
+      aspect-ratio: 4 / 3;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* CONTACT */
+
+    .contact-panel {
+      background: var(--navy);
+      color: white;
+      border-radius: var(--radius);
+      padding: 40px;
+      text-align: center;
+    }
+
+    .contact-panel h2 {
+      font-size: clamp(1.6rem, 4vw, 2.3rem);
+      margin-bottom: 12px;
+    }
+
+    .contact-panel p {
+      color: #d1dce4;
+      margin-bottom: 24px;
+    }
+
+    .contact-details {
+      margin-top: 20px;
+      color: #d1dce4;
+      font-size: 0.95rem;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #04111d;
+      color: #aabac5;
+      padding: 30px 0;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--teal);
+    }
+
+    .footer-brand {
+      color: white;
+      font-weight: 800;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+      margin: 15px 0;
+    }
+
+    /* IMAGE LIGHTBOX */
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.92);
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 95%;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 15px;
+      right: 22px;
+      color: white;
+      background: transparent;
+      border: 0;
+      font-size: 2.5rem;
+      cursor: pointer;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+      .hero {
+        min-height: 440px;
+      }
+
+      .hero::after {
+        background: linear-gradient(
+          0deg,
+          rgba(4,17,28,0.97),
+          rgba(4,17,28,0.65)
+        );
+      }
+
+      .hero-content {
+        padding: 55px 0;
+      }
+
+      .info-grid {
+        gap: 6px;
+      }
+
+      .info-item small {
+        font-size: 0.74rem;
+      }
+
+      section.content-section {
+        padding: 42px 0;
+      }
+
+      .about-card {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 22px;
+      }
+
+      .about-image {
+        height: 250px;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .service-card {
+        padding: 17px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .contact-panel {
+        padding: 30px 20px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================================
+       1. HEADER
+       Change the brand text here if needed.
+  ========================================== -->
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="https://ridelinkstudio.github.io/">
+        Ride<span>Link</span>
+      </a>
+      <div class="nav-label">Business Profile</div>
+    </div>
+  </header>
+
+  <!-- =========================================
+       2. HERO
+       Hero photo + business name + contact buttons.
+  ========================================== -->
+
+  <section class="hero">
+    <img
+      id="heroImage"
+      class="hero-image"
+      src="images/alfa-hero.jpg"
+      alt="Alfa Jibril Auto Service workshop"
+      fetchpriority="high"
+    >
+
+    <div class="container hero-content">
+      <div class="eyebrow" id="heroTag">
+        Auto Service & Repairs
+      </div>
+
+      <h1 id="businessName">Alfa Jibril Auto Service</h1>
+
+      <p class="hero-description" id="businessTagline">
+        Your local auto service and repair workshop in Kuje, FCT.
+      </p>
+
+      <div class="location">
+        <span aria-hidden="true">📍</span>
+        <span id="businessLocation">Kuje, FCT, Nigeria</span>
+      </div>
+
+      <div class="buttons">
+        <a id="heroWhatsApp" class="btn btn-whatsapp"
+           href="#" target="_blank" rel="noopener">
+          WhatsApp the Business
+        </a>
+
+        <a id="heroCall" class="btn btn-call" href="#">
+          Call Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       3. QUICK BUSINESS INFORMATION
+  ========================================== -->
+
+  <div class="quick-info">
+    <div class="container info-grid">
+
+      <div class="info-item">
+        <div class="info-icon">🔧</div>
+        <strong>Auto Services</strong>
+        <small>Maintenance & Repairs</small>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon">📍</div>
+        <strong id="quickLocation">Kuje, FCT</strong>
+        <small>Business Location</small>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon">📞</div>
+        <strong>Direct Contact</strong>
+        <small>Speak to the Business</small>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       4. ABOUT THE BUSINESS
+       About photo uses gallery image 1.
+  ========================================== -->
+
+  <section class="content-section">
+    <div class="container">
+
+      <div class="about-card">
+
+        <div class="about-copy">
+          <h2 class="section-heading">About the Business</h2>
+
+          <p id="businessAbout">
+            Alfa Jibril Auto Service is an auto service business
+            located in Kuje, Federal Capital Territory, Nigeria.
+            Contact the workshop directly to discuss your vehicle's
+            servicing and repair needs.
+          </p>
+
+          <p>
+            Get in touch to enquire about available services,
+            pricing and workshop arrangements before visiting.
+          </p>
+
+          <div style="margin-top: 22px;">
+            <a id="aboutWhatsApp" class="btn btn-whatsapp"
+               href="#" target="_blank" rel="noopener">
+              Make an Enquiry
+            </a>
+          </div>
+        </div>
+
+        <img
+          id="aboutImage"
+          class="about-image"
+          src="images/alfa-1.jpg"
+          alt="Auto service workshop"
+          loading="lazy"
+        >
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       5. SERVICES
+       Edit the service list in BUSINESS DATA below.
+       Confirm the services with the business owner.
+  ========================================== -->
+
+  <section class="content-section" style="background:#eaf1f4;">
+    <div class="container">
+
+      <h2 class="section-heading">Services</h2>
+
+      <p class="section-intro">
+        Contact the workshop to confirm which services are
+        available for your vehicle.
+      </p>
+
+      <div class="service-grid" id="serviceGrid"></div>
+
+    </div>
+  </section>
+
+  <!-- =========================================
+       6. PHOTO GALLERY
+       Five gallery photos, plus the hero photo.
+  ========================================== -->
+
+  <section class="content-section">
+    <div class="container">
+
+      <h2 class="section-heading">Inside Our Business</h2>
+
+      <p class="section-intro">
+        Take a closer look at our workshop and automotive work.
+      </p>
+
+      <div class="gallery-grid" id="galleryGrid"></div>
+
+    </div>
+  </section>
+
+  <!-- =========================================
+       7. CONTACT / CALL TO ACTION
+  ========================================== -->
+
+  <section class="content-section">
+    <div class="container">
+
+      <div class="contact-panel">
+        <h2>Need Auto Service?</h2>
+
+        <p>
+          Contact Alfa Jibril Auto Service directly to discuss
+          your vehicle and make the necessary arrangements.
+        </p>
+
+        <div class="buttons" style="justify-content:center;">
+          <a id="contactWhatsApp" class="btn btn-whatsapp"
+             href="#" target="_blank" rel="noopener">
+            Chat on WhatsApp
+          </a>
+
+          <a id="contactCall" class="btn btn-call" href="#">
+            Call the Workshop
+          </a>
+        </div>
+
+        <div class="contact-details">
+          <div id="contactPhone"></div>
+          <div id="contactAddress"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================
+       8. RIDELINK FOOTER
+       Keep this branding for the free business
+       profile portfolio and visibility.
+  ========================================== -->
+
+  <footer>
+    <div class="container">
+
+      <div class="footer-brand">
+        Powered by <a href="https://ridelinkstudio.github.io/">
+          RideLink
+        </a>
+      </div>
+
+      <p>
+        Helping businesses build their online presence
+        and connect with more customers.
+      </p>
+
+      <div class="footer-links">
+        <a href="https://ridelinkstudio.github.io/">RideLink Home</a>
+        <a href="https://ridelinkstudio.github.io/ridelink/">RideLink Business</a>
+        <a id="footerWhatsApp" href="#" target="_blank" rel="noopener">
+          Contact Business
+        </a>
+      </div>
+
+      <p>
+        © <span id="currentYear"></span>
+        <span id="footerBusinessName">Alfa Jibril Auto Service</span>.
+      </p>
+
+    </div>
+  </footer>
+
+  <!-- GALLERY LIGHTBOX -->
+
+  <div class="lightbox" id="lightbox"
+       role="dialog" aria-modal="true"
+       aria-label="Expanded business photo">
+
+    <button class="lightbox-close" id="lightboxClose"
+            aria-label="Close image">&times;</button>
+
+    <img id="lightboxImage" src="" alt="">
+  </div>
+
+  <!-- =========================================
+       9. BUSINESS DATA
+       THIS IS THE MAIN CUSTOMIZATION SECTION.
+
+       For another business, edit this section first.
+       Keep phone in international digits without +.
+       Replace image filenames with your own files.
+  ========================================== -->
+
+  <script>
+    const BUSINESS = {
+
+      // BUSINESS IDENTITY
+      name: "Alfa Jibril Auto Service",
+      category: "Auto Service & Repairs",
+      tagline:
+        "Your local auto service and repair workshop in Kuje, FCT.",
+      location: "Kuje, FCT, Nigeria",
+      shortLocation: "Kuje, FCT",
+      phone: "2349034117910",
+
+      // Replace this description with owner-approved details.
+      about:
+        "Alfa Jibril Auto Service is an auto service business " +
+        "located in Kuje, Federal Capital Territory, Nigeria. " +
+        "Contact the workshop directly to discuss your vehicle's " +
+        "servicing and repair needs.",
+
+      // SIX PHOTOS TOTAL: one hero + five gallery photos.
+      heroImage: "images/alfa-hero.jpg",
+
+      gallery: [
+        {
+          image: "images/alfa-1.jpg",
+          alt: "Alfa Jibril Auto Service photo 1"
+        },
+        {
+          image: "images/alfa-2.jpg",
+          alt: "Alfa Jibril Auto Service photo 2"
+        },
+        {
+          image: "images/alfa-3.jpg",
+          alt: "Alfa Jibril Auto Service photo 3"
+        },
+        {
+          image: "images/alfa-4.jpg",
+          alt: "Alfa Jibril Auto Service photo 4"
+        },
+        {
+          image: "images/alfa-5.jpg",
+          alt: "Alfa Jibril Auto Service photo 5"
+        }
+      ],
+
+      // Edit this list to match the owner's actual services.
+      services: [
+        {
+          icon: "🔧",
+          title: "Vehicle Repairs",
+          description:
+            "Enquire about vehicle repair services and available solutions."
+        },
+        {
+          icon: "🛠️",
+          title: "Routine Servicing",
+          description:
+            "Ask about routine vehicle servicing and maintenance."
+        },
+        {
+          icon: "🚗",
+          title: "Engine Services",
+          description:
+            "Contact the workshop about engine-related concerns."
+        },
+        {
+          icon: "⚙️",
+          title: "Mechanical Work",
+          description:
+            "Discuss your vehicle's mechanical issues with the workshop."
+        },
+        {
+          icon: "🔍",
+          title: "Fault Assessment",
+          description:
+            "Enquire about assessing vehicle faults and possible repairs."
+        },
+        {
+          icon: "📞",
+          title: "Service Enquiries",
+          description:
+            "Contact the business to confirm availability and pricing."
+        }
+      ],
+
+      // Optional: use a business-specific message.
+      whatsappMessage:
+        "Hello Alfa Jibril Auto Service, I found your business " +
+        "profile on RideLink and would like to make an enquiry."
+    };
+
+    // =========================================
+    // 10. AUTOMATIC PAGE SETUP
+    // Normally, you won't need to edit below here.
+    // =========================================
+
+    const phoneDigits = BUSINESS.phone.replace(/\D/g, "");
+
+    const whatsappURL =
+      "https://wa.me/" + phoneDigits +
+      "?text=" + encodeURIComponent(BUSINESS.whatsappMessage);
+
+    const callURL = "tel:+" + phoneDigits;
+
+    document.title = BUSINESS.name + " | RideLink";
+
+    document.querySelector('meta[name="description"]').content =
+      BUSINESS.name + " in " + BUSINESS.location +
+      ". View the business profile and contact the business directly.";
+
+    document.getElementById("businessName").textContent =
+      BUSINESS.name;
+
+    document.getElementById("heroTag").textContent =
+      BUSINESS.category;
+
+    document.getElementById("businessTagline").textContent =
+      BUSINESS.tagline;
+
+    document.getElementById("businessLocation").textContent =
+      BUSINESS.location;
+
+    document.getElementById("quickLocation").textContent =
+      BUSINESS.shortLocation;
+
+    document.getElementById("businessAbout").textContent =
+      BUSINESS.about;
+
+    document.getElementById("heroImage").src =
+      BUSINESS.heroImage;
+
+    document.getElementById("heroImage").alt =
+      BUSINESS.name + " hero photo";
+
+    document.getElementById("aboutImage").src =
+      BUSINESS.gallery[0].image;
+
+    document.getElementById("aboutImage").alt =
+      BUSINESS.gallery[0].alt;
+
+    document.getElementById("footerBusinessName").textContent =
+      BUSINESS.name;
+
+    document.getElementById("contactPhone").textContent =
+      "Phone: +" + phoneDigits;
+
+    document.getElementById("contactAddress").textContent =
+      "Location: " + BUSINESS.location;
+
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+
+    // Set all WhatsApp buttons and phone links.
+    [
+      "heroWhatsApp",
+      "aboutWhatsApp",
+      "contactWhatsApp",
+      "footerWhatsApp"
+    ].forEach(function(id) {
+      document.getElementById(id).href = whatsappURL;
+    });
+
+    ["heroCall", "contactCall"].forEach(function(id) {
+      document.getElementById(id).href = callURL;
+    });
+
+    // Generate service cards.
+    const serviceGrid = document.getElementById("serviceGrid");
+
+    BUSINESS.services.forEach(function(service) {
+      const card = document.createElement("article");
+      card.className = "service-card";
+
+      const icon = document.createElement("div");
+      icon.className = "service-icon";
+      icon.textContent = service.icon;
+
+      const title = document.createElement("h3");
+      title.textContent = service.title;
+
+      const description = document.createElement("p");
+      description.textContent = service.description;
+
+      card.append(icon, title, description);
+      serviceGrid.appendChild(card);
+    });
+
+    // Generate the five gallery photos.
+    const galleryGrid = document.getElementById("galleryGrid");
+
+    BUSINESS.gallery.forEach(function(photo) {
+      const button = document.createElement("button");
+      button.className = "gallery-item";
+      button.type = "button";
+      button.setAttribute(
+        "aria-label",
+        "View " + photo.alt
+      );
+
+      const img = document.createElement("img");
+      img.src = photo.image;
+      img.alt = photo.alt;
+      img.loading = "lazy";
+
+      button.appendChild(img);
+      galleryGrid.appendChild(button);
+
+      button.addEventListener("click", function() {
+        document.getElementById("lightboxImage").src =
+          photo.image;
+
+        document.getElementById("lightboxImage").alt =
+          photo.alt;
+
+        document.getElementById("lightbox").classList.add("open");
+        document.getElementById("lightboxClose").focus();
+      });
+    });
+
+    // Close expanded gallery photo.
+    function closeLightbox() {
+      document.getElementById("lightbox").classList.remove("open");
+    }
+
+    document.getElementById("lightboxClose")
+      .addEventListener("click", closeLightbox);
+
+    document.getElementById("lightbox")
+      .addEventListener("click", function(event) {
+        if (event.target === this) closeLightbox();
+      });
+
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "Escape") closeLightbox();
+    });
+  </script>
+
+</body>
+</html>
